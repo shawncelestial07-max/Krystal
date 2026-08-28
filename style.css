@@ -2384,6 +2384,8 @@ footer {
     overflow: hidden;
     pointer-events: none;
 
+    z-index: 9991;
+}
 
 /* Individual particles */
 
