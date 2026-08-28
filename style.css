@@ -1490,256 +1490,148 @@ footer {
 }
 
 /* =========================================
-   DESKTOP POLISH
-   KRYSTAL PORTFOLIO
+   DESKTOP HERO FIX
 ========================================= */
 
 @media (min-width: 901px) {
 
-    /* NAVIGATION */
-
-    .navbar {
-        padding: 0 7%;
-        height: 75px;
-    }
-
-    .navbar h2 {
-        font-size: 24px;
-    }
-
-    .nav-links {
-        gap: 35px;
-    }
-
-
-    /* HERO */
-
     .hero {
-        min-height: 700px;
+        min-height: calc(100vh - 75px);
 
-        padding: 90px 8%;
+        padding: 70px 8%;
 
         display: flex;
+        flex-direction: row;
         align-items: center;
         justify-content: space-between;
 
-        gap: 100px;
+        gap: 70px;
     }
 
     .hero-text {
         flex: 1;
-        max-width: 650px;
+        max-width: 620px;
     }
 
     .hero h1 {
-        font-size: clamp(65px, 7vw, 105px);
+        font-size: clamp(60px, 6vw, 90px);
 
         line-height: .9;
 
-        letter-spacing: -5px;
+        letter-spacing: -4px;
+
+        margin-bottom: 25px;
     }
 
     .description {
-        font-size: 16px;
-
-        line-height: 1.8;
-
         max-width: 520px;
+
+        font-size: 14px;
+
+        line-height: 1.7;
     }
 
 
-    /* HERO PHOTO */
+    /* =====================================
+       DESKTOP PROFILE IMAGE
+    ===================================== */
 
     .hero-image {
-        width: 360px;
-        height: 450px;
+        position: relative;
+
+        width: 390px;
+        height: 470px;
 
         flex-shrink: 0;
 
-        margin-right: 40px;
+        margin-right: 30px;
     }
 
     .photo-box {
+        position: absolute;
+
         width: 285px;
         height: 380px;
 
-        top: 0;
         left: 0;
+        top: 15px;
 
-        padding: 10px;
+        padding: 9px;
+
+        background: var(--pink);
+
+        border: 3px solid var(--black);
+
+        transform: rotate(-3deg);
+
+        z-index: 3;
     }
 
     .photo-box img {
         width: 100%;
         height: 100%;
 
-        object-fit: cover;
+        display: block;
 
+        object-fit: cover;
         object-position: center;
     }
 
+
+    /* =====================================
+       LEOPARD BACKGROUND
+    ===================================== */
+
     .leopard-shape {
+        position: absolute;
+
         width: 300px;
         height: 390px;
 
         right: 0;
-        top: 25px;
+        top: 35px;
+
+        background-color: #a86f2e;
+
+        background-image:
+            radial-gradient(
+                ellipse at center,
+                #111 0 12%,
+                transparent 13%
+            ),
+            radial-gradient(
+                ellipse at center,
+                #e5bd65 0 27%,
+                transparent 28%
+            );
+
+        background-size: 65px 65px;
+
+        border-radius: 8px;
+
+        transform: rotate(4deg);
+
+        z-index: 1;
     }
+
+
+    /* =====================================
+       HEART
+    ===================================== */
 
     .pink-circle {
-        width: 82px;
-        height: 82px;
+        position: absolute;
 
-        right: -10px;
-        bottom: 5px;
+        width: 70px;
+        height: 70px;
 
-        font-size: 38px;
-    }
+        right: -5px;
+        bottom: 10px;
 
+        z-index: 5;
 
-    /* SECTIONS */
-
-    .section {
-        padding: 110px 8%;
-    }
-
-    .section-title {
-        margin-bottom: 60px;
-    }
-
-    .section-title h2 {
-        font-size: 65px;
-    }
-
-
-    /* ABOUT */
-
-    .about-content {
-        max-width: 1000px;
-    }
-
-    .about-text {
-        max-width: 800px;
-    }
-
-    .about-text h3 {
-        font-size: 38px;
-    }
-
-    .about-text p {
-        font-size: 16px;
-
-        line-height: 1.8;
-    }
-
-
-    /* EXPERIENCE */
-
-    .experience-list {
-        max-width: 1100px;
-    }
-
-    .experience-item {
-        grid-template-columns: 80px 1fr;
-
-        gap: 30px;
-
-        padding: 40px 0;
-    }
-
-    .experience-item h3 {
         font-size: 32px;
     }
 
-    .experience-item p:not(.experience-type) {
-        max-width: 750px;
-
-        font-size: 15px;
-    }
-
-
-    /* PROJECTS */
-
-    .projects {
-        max-width: 1100px;
-
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-
-        gap: 40px;
-    }
-
-    .project-image {
-        height: 270px;
-    }
-
-    .project-content {
-        padding: 30px;
-    }
-
-    .project-content h3 {
-        font-size: 26px;
-    }
-
-
-    /* EDUCATION */
-
-    .education-card {
-        max-width: 900px;
-
-        padding: 40px;
-    }
-
-
-    /* PROFILE */
-
-    .profile-grid {
-        max-width: 1000px;
-
-        grid-template-columns:
-            repeat(2, 1fr);
-    }
-
-    .profile-grid div {
-        padding: 28px 20px;
-    }
-
-
-    /* RESUME */
-
-    .resume {
-        padding: 80px 8%;
-    }
-
-    .resume h2 {
-        font-size: 65px;
-    }
-
-
-    /* CONTACT */
-
-    .contact {
-        padding-top: 130px;
-        padding-bottom: 130px;
-    }
-
-    .contact h2 {
-        font-size: 90px;
-    }
-
-    .contact-content > p:not(.eyebrow) {
-        font-size: 16px;
-
-        line-height: 1.8;
-    }
-
-
-    /* FOOTER */
-
-    footer {
-        padding: 28px 8%;
-    }
-
 }
-
 
