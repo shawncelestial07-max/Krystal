@@ -1501,6 +1501,106 @@ footer {
 }
 
 /* =========================================
+   PROJECT SHOWCASE - MOBILE FIX
+========================================= */
+
+@media (max-width: 700px) {
+
+    .projects {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .project {
+        width: 100%;
+        overflow: hidden;
+        border-radius: 8px;
+    }
+
+    .project-image {
+        width: 100%;
+        height: 210px;
+
+        padding: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: #fff0f6;
+
+        position: relative;
+        overflow: hidden;
+    }
+
+    .project-image img {
+        width: 100%;
+        height: 100%;
+
+        padding: 8px;
+
+        object-fit: contain;
+        object-position: center;
+
+        display: block;
+    }
+
+    .project-image span {
+        position: absolute;
+
+        top: 12px;
+        right: 12px;
+
+        font-size: 16px;
+
+        z-index: 5;
+
+        color: white;
+
+        text-shadow: 0 1px 4px rgba(0, 0, 0, .4);
+    }
+
+    .project-content {
+        padding: 20px;
+    }
+
+    .project-content h3 {
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+
+    .project-content p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+
+    .project-image {
+        height: 185px;
+    }
+
+    .project-image img {
+        padding: 6px;
+    }
+
+    .project-content {
+        padding: 17px;
+    }
+
+}
+
+
+/* =========================================
    CLEAN DESKTOP / TABLET HERO
 ========================================= */
 
