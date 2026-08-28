@@ -113,26 +113,3 @@ window.addEventListener("load", () => {
     }, 3200);
 
 });
-
-const aboutLinks = document.querySelectorAll(".about-link");
-const aboutSection = document.getElementById("about");
-
-aboutLinks.forEach(link => {
-
-    link.addEventListener("click", (event) => {
-
-        event.preventDefault();
-
-        aboutSection.classList.add("show-about");
-
-        setTimeout(() => {
-
-            aboutSection.scrollIntoView({
-                behavior: "smooth"
-            });
-
-        }, 50);
-
-    });
-
-});
