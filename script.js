@@ -113,3 +113,93 @@ window.addEventListener("load", () => {
     }, 3200);
 
 });
+
+/* =========================================
+   MODERN FLOATING PARTICLES
+========================================= */
+
+const particleField =
+    document.getElementById("particleField");
+
+if (particleField) {
+
+    const types = [
+        "dot",
+        "dot",
+        "dot",
+        "glow",
+        "glow",
+        "gold",
+        "ring",
+        "ring",
+        "leopard-ring"
+    ];
+
+
+    function createParticle() {
+
+        const particle =
+            document.createElement("div");
+
+        const type =
+            types[
+                Math.floor(
+                    Math.random() * types.length
+                )
+            ];
+
+        particle.className =
+            `modern-particle ${type}`;
+
+
+        particle.style.left =
+            Math.random() * 100 + "%";
+
+
+        const size =
+            4 + Math.random() * 18;
+
+        particle.style.setProperty(
+            "--size",
+            `${size}px`
+        );
+
+
+        const duration =
+            10 + Math.random() * 12;
+
+        particle.style.setProperty(
+            "--duration",
+            `${duration}s`
+        );
+
+
+        particle.style.animationDelay =
+            `${Math.random() * 5}s`;
+
+
+        particleField.appendChild(
+            particle
+        );
+
+
+        setTimeout(() => {
+            particle.remove();
+        }, 24000);
+
+    }
+
+
+    /* Start with a few particles */
+
+    for (let i = 0; i < 15; i++) {
+        createParticle();
+    }
+
+
+    /* Keep generating */
+
+    setInterval(createParticle, 900);
+
+}
+
