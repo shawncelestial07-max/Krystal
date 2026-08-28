@@ -115,7 +115,7 @@ window.addEventListener("load", () => {
 });
 
 /* =========================================
-   MODERN FLOATING PARTICLES
+   MODERN PARTICLE SYSTEM
 ========================================= */
 
 const particleField =
@@ -123,15 +123,15 @@ const particleField =
 
 if (particleField) {
 
-    const types = [
+    const particleTypes = [
         "dot",
         "dot",
         "dot",
-        "glow",
-        "glow",
+        "gold",
         "gold",
         "ring",
         "ring",
+        "glow",
         "leopard-ring"
     ];
 
@@ -141,41 +141,57 @@ if (particleField) {
         const particle =
             document.createElement("div");
 
+
         const type =
-            types[
+            particleTypes[
                 Math.floor(
-                    Math.random() * types.length
+                    Math.random() *
+                    particleTypes.length
                 )
             ];
 
-        particle.className =
-            `modern-particle ${type}`;
 
+        particle.className =
+            "modern-particle " + type;
+
+
+        /* Random horizontal position */
 
         particle.style.left =
             Math.random() * 100 + "%";
 
 
+        /* Random size */
+
         const size =
-            4 + Math.random() * 18;
+            5 + Math.random() * 16;
 
         particle.style.setProperty(
             "--size",
-            `${size}px`
+            size + "px"
         );
 
 
+        /* Random sideways movement */
+
+        const drift =
+            -80 + Math.random() * 160;
+
+        particle.style.setProperty(
+            "--drift",
+            drift + "px"
+        );
+
+
+        /* Random animation speed */
+
         const duration =
-            10 + Math.random() * 12;
+            7 + Math.random() * 8;
 
         particle.style.setProperty(
             "--duration",
-            `${duration}s`
+            duration + "s"
         );
-
-
-        particle.style.animationDelay =
-            `${Math.random() * 5}s`;
 
 
         particleField.appendChild(
@@ -183,23 +199,34 @@ if (particleField) {
         );
 
 
+        /* Remove when finished */
+
         setTimeout(() => {
+
             particle.remove();
-        }, 24000);
+
+        }, (duration + 1) * 1000);
 
     }
 
 
-    /* Start with a few particles */
+    /* Create particles immediately */
 
-    for (let i = 0; i < 15; i++) {
+    for (let i = 0; i < 30; i++) {
+
         createParticle();
+
     }
 
 
-    /* Keep generating */
+    /* Continue creating particles */
 
-    setInterval(createParticle, 900);
+    setInterval(() => {
+
+        createParticle();
+
+    }, 400);
 
 }
+
 
