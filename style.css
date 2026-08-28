@@ -1683,7 +1683,7 @@ footer {
         width: 65px;
         height: 65px;
 
-        right: 0px;
+        right: -5px;
         bottom: 10px;
 
         z-index: 5;
