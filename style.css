@@ -1708,22 +1708,22 @@ footer {
 }
 
 /* =========================================
-   CUTE PINK + LEOPARD PROJECT LOGOS
+   BIG CUTE SERVICE LOGOS
 ========================================= */
 
-.project-logo {
+.big-service-logo {
     width: 100%;
-    height: 270px;
+    height: 300px;
 
     position: relative;
+
+    overflow: hidden;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    overflow: hidden;
-
-    border-bottom: 1px solid #ddd;
+    border-bottom: 3px solid #151515;
 }
 
 
@@ -1731,327 +1731,203 @@ footer {
    VIRTUAL ASSISTANT
 ========================================= */
 
-.virtual-logo {
-    background: #ffb7d5;
-}
-
-
-/* Leopard background */
-
-.virtual-logo::before {
-    content: "";
-
-    position: absolute;
-
-    width: 280px;
-    height: 280px;
-
-    border-radius: 50%;
-
-    right: -90px;
-    bottom: -100px;
-
-    background-color: #b87938;
-
-    background-image:
-        radial-gradient(
-            ellipse,
-            #17100b 0 12%,
-            transparent 13%
-        ),
-        radial-gradient(
-            ellipse,
-            #e9c36d 0 25%,
-            transparent 26%
-        );
-
-    background-size: 55px 55px;
-
-    transform: rotate(-15deg);
-
-    opacity: .9;
-}
-
-
-/* Main logo circle */
-
-.logo-circle {
-    position: absolute;
-
-    width: 145px;
-    height: 145px;
-
-    border-radius: 50%;
-
-    background: #fff7fa;
-
-    border: 4px solid #151515;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: #f72585;
-
-    font-size: 65px;
-
-    box-shadow:
-        8px 8px 0 #f72585;
-
-    z-index: 2;
-}
-
-
-/* VA letters */
-
-.logo-text {
-    position: relative;
-
-    z-index: 3;
-
-    color: #151515;
-
-    font-size: 42px;
-
-    font-weight: 900;
-
-    letter-spacing: -2px;
-
-    margin-top: 65px;
-
-    background: #fff7fa;
-
-    padding: 2px 12px;
-
-    border: 2px solid #151515;
-
-    transform: rotate(-4deg);
-}
-
-
-/* Leopard paw/emoji detail */
-
-.logo-leopard {
-    position: absolute;
-
-    z-index: 4;
-
-    top: 45px;
-    left: calc(50% + 70px);
-
-    font-size: 42px;
-
-    transform: rotate(12deg);
+.virtual-assistant-logo {
+    background: #ff8fbd;
 }
 
 
 /* =========================================
-   CHAT SUPPORT
+   CUSTOMER SERVICE
 ========================================= */
 
-.chat-logo {
-    background: #ffd9e9;
+.customer-service-logo {
+    background: #ffb6d5;
 }
 
 
-/* Large leopard shape */
+/* =========================================
+   BIG ICON
+========================================= */
 
-.chat-logo::before {
-    content: "";
-
-    position: absolute;
-
-    width: 250px;
-    height: 250px;
-
-    left: -100px;
-    bottom: -100px;
-
-    border-radius: 50%;
-
-    background-color: #a96d32;
-
-    background-image:
-        radial-gradient(
-            ellipse,
-            #17100b 0 12%,
-            transparent 13%
-        ),
-        radial-gradient(
-            ellipse,
-            #e8c16a 0 25%,
-            transparent 26%
-        );
-
-    background-size: 50px 50px;
-
-    opacity: .9;
-}
-
-
-/* Chat bubble */
-
-.chat-bubble {
-    position: relative;
-
-    z-index: 3;
-
-    width: 155px;
-    height: 110px;
-
-    background: #f72585;
-
-    border: 4px solid #151515;
-
-    border-radius: 45%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    box-shadow:
-        9px 9px 0 #151515;
-
-    transform: rotate(-5deg);
-}
-
-
-/* Bubble tail */
-
-.chat-bubble::after {
-    content: "";
-
-    position: absolute;
-
-    bottom: -23px;
-    left: 30px;
-
-    width: 35px;
-    height: 35px;
-
-    background: #f72585;
-
-    border-left: 4px solid #151515;
-    border-bottom: 4px solid #151515;
-
-    transform: rotate(-25deg);
-}
-
-
-/* Heart inside bubble */
-
-.chat-bubble span {
-    color: white;
-
-    font-size: 48px;
-
-    line-height: 1;
-}
-
-
-/* CHAT text */
-
-.chat-logo .logo-text {
+.service-icon {
     position: absolute;
 
     z-index: 5;
 
-    margin: 0;
+    width: 125px;
+    height: 125px;
 
-    bottom: 35px;
+    border-radius: 35px;
 
-    right: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    font-size: 18px;
+    background: #fff5fa;
 
-    background: #fff7fa;
+    border: 4px solid #151515;
 
-    padding: 4px 10px;
+    font-size: 65px;
 
-    border: 2px solid #151515;
+    box-shadow:
+        9px 9px 0 #f72585;
 
-    transform: rotate(4deg);
+    transform: rotate(-6deg);
+
+    transition: .3s ease;
+}
+
+
+/* Chat icon */
+
+.chat-icon {
+    border-radius: 50%;
+
+    transform: rotate(5deg);
+
+    box-shadow:
+        9px 9px 0 #151515;
 }
 
 
 /* =========================================
-   CUTE DECORATIONS
+   SERVICE NAME
 ========================================= */
 
-.logo-star {
-    position: absolute;
+.service-name {
+    position: relative;
 
     z-index: 6;
 
+    margin-top: 190px;
+
+    padding: 7px 15px;
+
+    background: #f72585;
+
     color: white;
 
-    font-size: 28px;
+    border: 3px solid #151515;
+
+    font-size: 22px;
+
+    line-height: .95;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    text-align: center;
+
+    transform: rotate(-3deg);
+
+    box-shadow:
+        5px 5px 0 #151515;
+}
+
+
+/* =========================================
+   LEOPARD DECORATION
+========================================= */
+
+.leopard-blob {
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    right: -45px;
+    bottom: -65px;
+
+    border-radius: 50%;
+
+    background-color: #c47b38;
+
+    background-image:
+        radial-gradient(
+            ellipse,
+            #17100b 0 12%,
+            transparent 13%
+        ),
+        radial-gradient(
+            ellipse,
+            #f1ca76 0 25%,
+            transparent 26%
+        );
+
+    background-size: 42px 42px;
+
+    transform: rotate(15deg);
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   CUTE SPARKLES
+========================================= */
+
+.cute-star {
+    position: absolute;
+
+    z-index: 8;
+
+    color: white;
+
+    font-weight: 900;
 
     text-shadow:
         2px 2px 0 #151515;
 }
 
-.star-one {
+
+.star-1 {
     top: 25px;
-    left: 25px;
+    left: 35px;
 
     color: #f72585;
+
+    font-size: 38px;
 }
 
-.star-two {
-    right: 35px;
+.star-2 {
     top: 35px;
+    right: 45px;
 
-    color: white;
+    font-size: 30px;
 }
 
-.star-three {
-    bottom: 30px;
-    left: 40%;
+.star-3 {
+    bottom: 35px;
+    left: 50px;
+
+    font-size: 25px;
 
     color: #f72585;
 }
 
+.star-4 {
+    bottom: 25px;
+    right: 100px;
 
-.project-number {
-    position: absolute;
-
-    z-index: 7;
-
-    top: 18px;
-    right: 18px;
-
-    color: #151515;
-
-    background: white;
-
-    width: 35px;
-    height: 35px;
-
-    border-radius: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 12px;
-
-    font-weight: 900;
-
-    border: 2px solid #151515;
+    font-size: 28px;
 }
 
 
 /* =========================================
-   HOVER EFFECT
+   HOVER
 ========================================= */
 
-.project:hover .project-logo {
-    transform: scale(1.02);
+.project:hover .service-icon {
+    transform:
+        rotate(-6deg)
+        scale(1.08);
 }
 
-.project-logo {
-    transition: .3s ease;
+.customer-service-logo:hover .service-icon {
+    transform:
+        rotate(5deg)
+        scale(1.08);
 }
 
 
@@ -2061,51 +1937,75 @@ footer {
 
 @media (max-width: 700px) {
 
-    .project-logo {
-        height: 210px;
+    .big-service-logo {
+        height: 250px;
     }
 
-    .logo-circle {
-        width: 115px;
-        height: 115px;
+    .service-icon {
+        width: 100px;
+        height: 100px;
 
-        font-size: 50px;
+        font-size: 52px;
+
+        border-width: 3px;
 
         box-shadow:
             6px 6px 0 #f72585;
     }
 
-    .logo-text {
-        font-size: 32px;
-
-        margin-top: 50px;
+    .chat-icon {
+        box-shadow:
+            6px 6px 0 #151515;
     }
 
-    .logo-leopard {
-        font-size: 32px;
+    .service-name {
+        margin-top: 155px;
 
-        top: 30px;
-        left: calc(50% + 55px);
+        font-size: 17px;
+
+        padding: 6px 11px;
+
+        border-width: 2px;
+
+        box-shadow:
+            4px 4px 0 #151515;
     }
 
-    .chat-bubble {
-        width: 125px;
-        height: 90px;
+    .leopard-blob {
+        width: 145px;
+        height: 145px;
+
+        right: -50px;
+        bottom: -60px;
+
+        background-size: 35px 35px;
     }
 
-    .chat-bubble span {
-        font-size: 38px;
+    .star-1 {
+        top: 18px;
+        left: 20px;
+
+        font-size: 28px;
     }
 
-    .chat-logo .logo-text {
+    .star-2 {
+        top: 25px;
+        right: 25px;
+
+        font-size: 24px;
+    }
+
+    .star-3 {
         bottom: 25px;
+        left: 30px;
 
-        right: 20%;
-
-        font-size: 15px;
+        font-size: 20px;
     }
 
-    .logo-star {
+    .star-4 {
+        bottom: 20px;
+        right: 70px;
+
         font-size: 22px;
     }
 
