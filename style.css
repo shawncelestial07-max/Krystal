@@ -1449,18 +1449,6 @@ footer {
     display: block;
 }
 
-/* About is hidden initially */
-#about {
-    display: none;
-}
-
-#about.show-about {
-    display: block;
-}
-
-
-
-
 
 /* =========================================
    MOBILE INTRO
