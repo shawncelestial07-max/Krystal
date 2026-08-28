@@ -1489,3 +1489,257 @@ footer {
 
 }
 
+/* =========================================
+   DESKTOP POLISH
+   KRYSTAL PORTFOLIO
+========================================= */
+
+@media (min-width: 901px) {
+
+    /* NAVIGATION */
+
+    .navbar {
+        padding: 0 7%;
+        height: 75px;
+    }
+
+    .navbar h2 {
+        font-size: 24px;
+    }
+
+    .nav-links {
+        gap: 35px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 700px;
+
+        padding: 90px 8%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 100px;
+    }
+
+    .hero-text {
+        flex: 1;
+        max-width: 650px;
+    }
+
+    .hero h1 {
+        font-size: clamp(65px, 7vw, 105px);
+
+        line-height: .9;
+
+        letter-spacing: -5px;
+    }
+
+    .description {
+        font-size: 16px;
+
+        line-height: 1.8;
+
+        max-width: 520px;
+    }
+
+
+    /* HERO PHOTO */
+
+    .hero-image {
+        width: 360px;
+        height: 450px;
+
+        flex-shrink: 0;
+
+        margin-right: 40px;
+    }
+
+    .photo-box {
+        width: 285px;
+        height: 380px;
+
+        top: 0;
+        left: 0;
+
+        padding: 10px;
+    }
+
+    .photo-box img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+
+        object-position: center;
+    }
+
+    .leopard-shape {
+        width: 300px;
+        height: 390px;
+
+        right: 0;
+        top: 25px;
+    }
+
+    .pink-circle {
+        width: 82px;
+        height: 82px;
+
+        right: -10px;
+        bottom: 5px;
+
+        font-size: 38px;
+    }
+
+
+    /* SECTIONS */
+
+    .section {
+        padding: 110px 8%;
+    }
+
+    .section-title {
+        margin-bottom: 60px;
+    }
+
+    .section-title h2 {
+        font-size: 65px;
+    }
+
+
+    /* ABOUT */
+
+    .about-content {
+        max-width: 1000px;
+    }
+
+    .about-text {
+        max-width: 800px;
+    }
+
+    .about-text h3 {
+        font-size: 38px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+
+        line-height: 1.8;
+    }
+
+
+    /* EXPERIENCE */
+
+    .experience-list {
+        max-width: 1100px;
+    }
+
+    .experience-item {
+        grid-template-columns: 80px 1fr;
+
+        gap: 30px;
+
+        padding: 40px 0;
+    }
+
+    .experience-item h3 {
+        font-size: 32px;
+    }
+
+    .experience-item p:not(.experience-type) {
+        max-width: 750px;
+
+        font-size: 15px;
+    }
+
+
+    /* PROJECTS */
+
+    .projects {
+        max-width: 1100px;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 40px;
+    }
+
+    .project-image {
+        height: 270px;
+    }
+
+    .project-content {
+        padding: 30px;
+    }
+
+    .project-content h3 {
+        font-size: 26px;
+    }
+
+
+    /* EDUCATION */
+
+    .education-card {
+        max-width: 900px;
+
+        padding: 40px;
+    }
+
+
+    /* PROFILE */
+
+    .profile-grid {
+        max-width: 1000px;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .profile-grid div {
+        padding: 28px 20px;
+    }
+
+
+    /* RESUME */
+
+    .resume {
+        padding: 80px 8%;
+    }
+
+    .resume h2 {
+        font-size: 65px;
+    }
+
+
+    /* CONTACT */
+
+    .contact {
+        padding-top: 130px;
+        padding-bottom: 130px;
+    }
+
+    .contact h2 {
+        font-size: 90px;
+    }
+
+    .contact-content > p:not(.eyebrow) {
+        font-size: 16px;
+
+        line-height: 1.8;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 28px 8%;
+    }
+
+}
+
+
