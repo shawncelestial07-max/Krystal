@@ -229,4 +229,84 @@ if (particleField) {
 
 }
 
+// =========================================
+// MODERN PINK + LEOPARD PARTICLES
+// =========================================
+
+const particleField = document.querySelector(".particle-field");
+
+if (particleField) {
+
+    function createParticle() {
+
+        const particle = document.createElement("span");
+
+        const types = [
+            "dot",
+            "gold",
+            "ring",
+            "leopard-ring",
+            "glow"
+        ];
+
+        const type =
+            types[Math.floor(Math.random() * types.length)];
+
+        particle.classList.add(
+            "modern-particle",
+            type
+        );
+
+        const size =
+            Math.floor(Math.random() * 12) + 6;
+
+        const duration =
+            Math.floor(Math.random() * 8) + 8;
+
+        const drift =
+            Math.floor(Math.random() * 160) - 80;
+
+        particle.style.setProperty(
+            "--size",
+            `${size}px`
+        );
+
+        particle.style.setProperty(
+            "--duration",
+            `${duration}s`
+        );
+
+        particle.style.setProperty(
+            "--drift",
+            `${drift}px`
+        );
+
+        particle.style.left =
+            `${Math.random() * 100}%`;
+
+        particleField.appendChild(particle);
+
+        setTimeout(() => {
+            particle.remove();
+        }, duration * 1000);
+    }
+
+
+    // Create initial particles
+    for (let i = 0; i < 18; i++) {
+        setTimeout(
+            createParticle,
+            i * 400
+        );
+    }
+
+
+    // Keep creating particles
+    setInterval(() => {
+        createParticle();
+    }, 700);
+
+}
+
+
 
