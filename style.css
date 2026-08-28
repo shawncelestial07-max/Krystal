@@ -2368,40 +2368,41 @@ footer {
 }
 
 /* =========================================
-   MODERN FLOATING PARTICLES
-   PINK + LEOPARD + MAXIMALIST
+   VISIBLE MODERN PARTICLES
 ========================================= */
 
 .particle-field {
     position: fixed;
     inset: 0;
-
     width: 100%;
     height: 100vh;
 
     overflow: hidden;
     pointer-events: none;
 
-    z-index: 0;
+    z-index: 9990;
 }
+
+/* Individual particles */
 
 .modern-particle {
     position: absolute;
 
-    bottom: -60px;
+    bottom: -50px;
+
+    display: block;
 
     pointer-events: none;
 
     opacity: 0;
 
-    animation:
-        modernFloat
-        var(--duration)
-        linear infinite;
+    animation: particleRise var(--duration) linear forwards;
+
+    z-index: 9991;
 }
 
 
-/* Pink dots */
+/* Pink circles */
 
 .modern-particle.dot {
     width: var(--size);
@@ -2409,31 +2410,15 @@ footer {
 
     border-radius: 50%;
 
-    background: var(--pink);
+    background: #f72585;
 
     box-shadow:
-        0 0 8px rgba(247, 37, 133, .4),
-        0 0 20px rgba(247, 37, 133, .15);
+        0 0 6px #f72585,
+        0 0 15px rgba(247,37,133,.5);
 }
 
 
-/* Soft pink glow */
-
-.modern-particle.glow {
-    width: var(--size);
-    height: var(--size);
-
-    border-radius: 50%;
-
-    background: #ff72ad;
-
-    filter: blur(8px);
-
-    opacity: .25;
-}
-
-
-/* Gold accents */
+/* Gold circles */
 
 .modern-particle.gold {
     width: var(--size);
@@ -2441,111 +2426,109 @@ footer {
 
     border-radius: 50%;
 
-    background: var(--gold);
+    background: #e7bd64;
 
     box-shadow:
-        0 0 10px rgba(231, 189, 100, .4);
+        0 0 8px rgba(231,189,100,.8);
 }
 
 
-/* Modern rings */
+/* Pink outlined circles */
 
 .modern-particle.ring {
     width: var(--size);
     height: var(--size);
 
-    border-radius: 50%;
+    border: 2px solid #f72585;
 
-    border: 1px solid rgba(247, 37, 133, .35);
+    border-radius: 50%;
 
     background: transparent;
 }
 
 
-/* Leopard-inspired shapes */
+/* Leopard-inspired ring */
 
 .modern-particle.leopard-ring {
     width: var(--size);
-    height: calc(var(--size) * .7);
+    height: calc(var(--size) * .65);
+
+    border: 3px solid #9b652f;
 
     border-radius: 50%;
-
-    border: 2px solid rgba(155, 101, 47, .3);
 
     background:
         radial-gradient(
             circle,
-            rgba(21, 21, 21, .2) 0 15%,
-            transparent 17%
+            #151515 0 20%,
+            transparent 22%
         );
-
-    transform: rotate(25deg);
 }
 
 
-/* Floating animation */
+/* Soft glow */
 
-@keyframes modernFloat {
+.modern-particle.glow {
+    width: var(--size);
+    height: var(--size);
+
+    border-radius: 50%;
+
+    background: #ff4f9a;
+
+    filter: blur(10px);
+
+    opacity: .45;
+}
+
+
+/* =========================================
+   FLOATING ANIMATION
+========================================= */
+
+@keyframes particleRise {
 
     0% {
         transform:
-            translate3d(0, 0, 0)
+            translate(0, 0)
             rotate(0deg)
-            scale(.6);
+            scale(.5);
 
         opacity: 0;
     }
 
     10% {
-        opacity: .6;
+        opacity: .9;
     }
 
-    35% {
+    50% {
         transform:
-            translate3d(
-                40px,
-                -30vh,
-                0
+            translate(
+                var(--drift),
+                -50vh
             )
-            rotate(45deg)
+            rotate(90deg)
             scale(1);
-    }
-
-    65% {
-        transform:
-            translate3d(
-                -30px,
-                -65vh,
-                0
-            )
-            rotate(100deg)
-            scale(.9);
     }
 
     100% {
         transform:
-            translate3d(
-                50px,
-                -120vh,
-                0
+            translate(
+                calc(var(--drift) * -1),
+                -115vh
             )
             rotate(180deg)
-            scale(.5);
+            scale(.6);
 
         opacity: 0;
     }
 }
 
 
-/* Keep your actual website above particles */
+/* Don't show particles over intro */
 
-.navbar,
-.hero,
-.section,
-.resume,
-footer {
-    position: relative;
-    z-index: 2;
+#intro {
+    z-index: 99999;
 }
 
 
@@ -2554,18 +2537,7 @@ footer {
 @media (max-width: 700px) {
 
     .particle-field {
-        opacity: .6;
-    }
-
-}
-
-
-/* Accessibility */
-
-@media (prefers-reduced-motion: reduce) {
-
-    .particle-field {
-        display: none;
+        opacity: .75;
     }
 
 }
